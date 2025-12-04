@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fill the Heart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="page2.css" />
+</head>
+
+<body>
+  <p class="instruction">Fill the heart to continue</p>
+
+  <div class="game-container">
+    <div class="grid">
+
+      <!-- ROW 1 -->
+      <div class="box heart">💗</div>
+      <div class="box cross">✕</div>
+      <div class="box cross">✕</div>
+
+      <!-- ROW 2 -->
+      <div class="box cross">✕</div>
+
+      <!-- Middle clickable box -->
+      <div class="box empty" id="middleBox"></div>
+
+      <div class="box cross">✕</div>
+
+      <!-- ROW 3 -->
+      <div class="box cross">✕</div>
+      <div class="box cross">✕</div>
+      <div class="box heart">💗</div>
+
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="nav-buttons">
+    <a href="page1.html" class="back-btn">← Back</a>
+    <a href="page3.html" class="next-btn">Next →</a>
+  </div>
+
+  <!-- Popup overlay -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-text">
+      💖 You won my heart 💖
+    </div>
+  </div>
+
+  <script src="page2.js"></script>
+  <script>
+  // Smooth page transition on navigation
+  document.querySelectorAll("a").forEach(link => {
+    if (link.href && link.getAttribute("href").includes(".html")) {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location = this.href;
+        }, 450); // match fadeOut duration
+      });
+    }
+  });
+</script>
+</body>
+</html>

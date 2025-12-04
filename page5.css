@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffeef2, #f9e1e8);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.container {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-card {
+  width: min(700px, 90vw);
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.title {
+  color: #d76f86;
+  margin-bottom: 25px;
+}
+
+.art-wrapper img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.now-playing-box {
+  background: #faf7f7;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin: 25px auto;
+  width: 70%;
+}
+
+#statusLabel {
+  font-size: 0.9rem;
+  color: #c56878;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#songTitle {
+  font-weight: 600;
+}
+
+.time-row {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+#progressBar {
+  width: 70%;
+  margin-top: 8px;
+  accent-color: #d36178;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.ctrl-btn, .play-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffe0e7;
+  border: 2px solid #e09aa9;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.play-btn {
+  background: #d36178;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.nav-buttons {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 40px;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn {
+  background: #9dc4f0;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.next-btn {
+  background: #f7c4d5;
+  color: hotpink;
+  padding: 10px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+/* Fade-in on page load */
+body {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-out when leaving the page */
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}

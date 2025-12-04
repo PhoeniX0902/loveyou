@@ -1,0 +1,138 @@
+body {
+  background: #fff6f7;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.instruction {
+  margin-top: 30px;
+  color: #c45b76;
+  font-size: 1rem;
+}
+
+/* Game container */
+.game-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Responsive grid box */
+.grid {
+  width: min(420px, 90vw);       /* AUTO-SCALES — prevents overflow */
+  height: min(420px, 90vw);
+  background: #fbf0ef;
+  border-radius: 18px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  border: 1px solid #f3dede;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.box {
+  background: #fff;
+  border: 2px solid #f28aa5;
+  border-radius: 10px;
+  font-size: clamp(1.7rem, 6vw, 2.4rem); /* Auto-resizes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5b86;
+  cursor: default;
+  user-select: none;
+}
+
+.cross {
+  color: #dd6f84;
+}
+
+.heart {
+  color: #ff3f70;
+}
+
+/* Middle box clickable */
+.empty {
+  cursor: pointer;
+}
+
+.empty:hover {
+  background: #ffeef3;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  width: 100%;
+  max-width: 900px;
+  margin: 45px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;  /* Scales with screen */
+}
+
+.back-btn,
+.next-btn {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent button text breaking */
+}
+
+.back-btn {
+  background: #9dc4f0;
+  color: #fff;
+}
+
+.next-btn {
+  background: #f7c4d5;
+  color: hotpink;
+}
+
+/* Popup overlay */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 230, 235, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.popup-text {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: #d75b7d;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+/* Fade-in on page load */
+body {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-out when leaving the page */
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}
