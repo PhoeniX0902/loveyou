@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffeef2, #fbe4e7);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-box {
+  width: min(800px, 92vw);
+  background: white;
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.title {
+  color: #d76f86;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.from-to {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+/* Carousel box */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  background: #f9c3cd;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #c25a6a;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  background: #f7b4c2;
+}
+
+/* Image wrapper */
+.image-wrapper {
+  width: min(500px, 80vw);
+  height: min(360px, 60vw);
+  background: #fdf5f6;
+  border: 1px solid #f1c7cf;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade-img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Caption for 2nd image only */
+.caption {
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 1rem;
+  color: #c65d6e;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Heart icon bottom right */
+.heart-icon {
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  opacity: 0.85;
+}
+
+/* Bottom text row */
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  font-size: 0.95rem;
+}
+
+.signature {
+  color: #d65f7e;
+  font-weight: 500;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 50px;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn,
+.next-btn {
+  padding: 10px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.back-btn {
+  background: #9dc4f0;
+  color: white;
+}
+
+.next-btn {
+  background: #f7c4d5;
+  color: hotpink;
+}
+/* Fade-in on page load */
+body {
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade-out when leaving the page */
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.97); }
+}
+.card-box {
+  width: min(800px, 92vw);
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+}
+
+.image-wrapper {
+  width: min(500px, 85vw);
+  height: auto;
+  aspect-ratio: 4/3;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .card-box { padding: 22px; }
+  .arrow { width: 32px; height: 32px; }
+  .heart-icon { width: 32px; }
+}

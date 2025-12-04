@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Kuchupuchu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Top text -->
+    <header class="top-heading">
+      <p class="for-my">FOR MY</p>
+      <p class="kuchu">
+        ✦ K U C H U P U C H U ✦
+      </p>
+    </header>
+
+    <!-- Main content -->
+    <main class="content">
+      <div class="sorry-block">
+        <div class="iam-wrapper">
+          <span class="iam-text">I am</span>
+          <span class="really-pill">really</span>
+        </div>
+
+        <h1 class="sorry-text">SORRY</h1>
+
+        <p class="description">
+          I made this specially just for you, for moments when you're mad.
+          Take a deep breath, read slowly, and check
+          <span class="desc-highlight">what I made for you 💗</span>.
+        </p>
+
+        <div class="hello-kitty-wrapper">
+          <img
+            src="https://magazine-demo.onrender.com/assets/intro-DzUiguR4.gif"
+            alt="Hello Kitty"
+            class="hello-kitty"
+          />
+        </div>
+      </div>
+
+      <!-- Next button -->
+      <div class="next-wrapper">
+        <a href="page2.html" class="next-button">
+          Next →
+        </a>
+      </div>
+    </main>
+  </div>
+  <script>
+  // Smooth page transition on navigation
+  document.querySelectorAll("a").forEach(link => {
+    if (link.href && link.getAttribute("href").includes(".html")) {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location = this.href;
+        }, 450); // match fadeOut duration
+      });
+    }
+  });
+</script>
+</body>
+</html>
